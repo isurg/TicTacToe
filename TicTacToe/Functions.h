@@ -69,10 +69,8 @@ int turn_function(int turn_num) {
 }
 
 
+char turn_to_char(int turn) {
 
-void choose(int grid_array[3][3], int turn) {
-
-	int choice;
 	char turn_char;
 
 	// To convert the number into a representative char
@@ -80,6 +78,13 @@ void choose(int grid_array[3][3], int turn) {
 		turn_char = 'X'; // X = 0
 	else
 		turn_char = 'O'; // O = 10
+
+	return turn_char;
+}
+void choose(int grid_array[3][3], int turn) {
+
+	int choice;
+	char turn_char = turn_to_char(turn);
 
 
 	std::cout << "\n It's " << turn_char << "'s turn, choose a spot: ";
@@ -102,27 +107,32 @@ void choose(int grid_array[3][3], int turn) {
 
 bool win_checker(int grid_array[3][3]) {
 
+	// I summed the 1st & 2nd to compare with the 3rd times 2
+	// as I countered bugs when comparing all three directly
+
 	// 8 sequences
 	for (int i = 0; i < 3; i++) {
 
 		// 3 sequences, rows
-		if (grid_array[i][0] == grid_array[i][1] == grid_array[i][2])
+		if ( (grid_array[i][0] + grid_array[i][1]) == (grid_array[i][2] * 2) )
 			return true;
-		
+
 		// 3 sequences
-		if (grid_array[0][i] == grid_array[1][i] == grid_array[2][i])
+		if ( (grid_array[0][i] + grid_array[1][i]) == (grid_array[2][i] * 2) )
 			return true;
+			
 		
 		// Check it once, as it not related to the loop
 		if (i == 0) {
 
 			// 1 sequence, decline diagonal
-			if (grid_array[0][0] == grid_array[1][1] == grid_array[2][2])
+			if ( (grid_array[0][0] + grid_array[1][1]) == (grid_array[2][2] * 2) )
 				return true;
-			
+	
 			// 1 sequence, incline diagonal
-			if (grid_array[2][0] == grid_array[1][1] == grid_array[0][2])
+			if ( (grid_array[2][0] + grid_array[1][1]) == (grid_array[0][2] * 2) )
 				return true;
+				
 		}
 
 	}
@@ -132,6 +142,8 @@ bool win_checker(int grid_array[3][3]) {
 
 
 void end_game(bool win, int turn) {
+
+	char turn_char = turn_to_char(turn);
 
 	// if any had won
 	if (win == true) {

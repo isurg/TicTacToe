@@ -24,6 +24,7 @@ int main()
 	// then return true, and exit while loop
 	bool win = false;
 
+	
 
 	while (win == false && turn_num < 9) {
 
@@ -36,7 +37,9 @@ int main()
 		choose(grid_array, turn);
 
 		// check if any has won, return true if so
-		win = win_checker(grid_array);
+		// check only after 5 movement, as it impossible to win before that
+		if (turn_num >= 5)
+			win = win_checker(grid_array);
 		
 
 		if (win == false)
