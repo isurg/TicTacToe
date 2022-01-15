@@ -98,6 +98,9 @@ char turn_to_char(int turn) {
 
 	return turn_char;
 }
+
+
+
 void choose(int grid_array[3][3], int turn) {
 
 	int choice;
@@ -164,9 +167,12 @@ void end_game(bool win, int turn) {
 
 	// if any had won
 	if (win == true) {
-		std::cout << "The winner is " << turn << ", Congrats!\n";
+		std::cout << "The winner is " << turn_char << ", Congrats!\n";
 	}
 	else {
 		std::cout << "It's a tie!\n";
 	}
+
+	int pause;
+	std::cin >> pause;
 }
