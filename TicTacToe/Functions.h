@@ -6,9 +6,26 @@ void greet() {
 
 	std::cout << "_______________________\n\n";
 	std::cout << "Welcome to Tic-Tac-Toe!\n\n";
-	std::cout << "ASCII ART\n\n";
-	std::cout << "_______________________\n\n\n";
-
+	std::cout << "XXXXXXX       XXXXXXX                                                         OOOOOOOOO     \n";
+	std::cout << "X:::::X       X:::::X                                                       OO:::::::::OO   \n";
+	std::cout << "X:::::X       X:::::X                                                     OO:::::::::::::OO \n";
+	std::cout << "X::::::X     X::::::X                                                    O:::::::OOO:::::::O\n";
+	std::cout << "XXX:::::X   X:::::XXX     vvvvvvv           vvvvvvv    ssssssssss        O::::::O   O::::::O\n";
+	std::cout << "   X:::::X X:::::X         v:::::v         v:::::v   ss::::::::::s       O:::::O     O:::::O\n";
+	std::cout << "    X:::::X:::::X           v:::::v       v:::::v  ss:::::::::::::s      O:::::O     O:::::O\n";
+	std::cout << "     X:::::::::X             v:::::v     v:::::v   s::::::ssss:::::s     O:::::O     O:::::O\n";
+	std::cout << "     X:::::::::X              v:::::v   v:::::v     s:::::s  ssssss      O:::::O     O:::::O\n";
+	std::cout << "    X:::::X:::::X              v:::::v v:::::v        s::::::s           O:::::O     O:::::O\n";
+	std::cout << "   X:::::X X:::::X              v:::::v:::::v            s::::::s        O:::::O     O:::::O\n";
+	std::cout << "XXX:::::X   X:::::XXX            v:::::::::v       ssssss   s:::::s      O::::::O   O::::::O\n";
+	std::cout << "X::::::X     X::::::X             v:::::::v        s:::::ssss::::::s     O:::::::OOO:::::::O\n";
+	std::cout << "X:::::X       X:::::X              v:::::v         s::::::::::::::s       OO:::::::::::::OO \n";
+	std::cout << "X:::::X       X:::::X               v:::v           s:::::::::::ss          OO:::::::::OO   \n";
+	std::cout << "XXXXXXX       XXXXXXX                vvv             sssssssssss              OOOOOOOOO     \n";
+	std::cout << "\n";
+	std::cout << "\n";
+	std::cout << "\n";
+	
 }
 
 
