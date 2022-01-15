@@ -35,10 +35,16 @@ void draw_board(int grid_array[3][3]) {
 
 		for (int j = 0; j < 3; j++) {
 
-			if (grid_array[i][j] == 0)
-
-			std::cout << " " << grid_array[i][j];
-
+			if (grid_array[i][j] == 0) {
+				std::cout << " " << 'X';
+			}
+			else if (grid_array[i][j] == 10) {
+				std::cout << " " << 'O';
+			}
+			else {
+				std::cout << " " << grid_array[i][j];
+			}
+			
 			if (j != 2)
 				std::cout << "  | ";
 
