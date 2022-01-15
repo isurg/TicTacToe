@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+
 void greet() {
 
 	std::cout << "_______________________\n\n";
@@ -8,6 +10,7 @@ void greet() {
 	std::cout << "_______________________\n\n\n";
 
 }
+
 
 
 void make_spots(int grid_array[3][3]) {
@@ -23,6 +26,7 @@ void make_spots(int grid_array[3][3]) {
 		}
 	}
 }
+
 
 
 void draw_board(int grid_array[3][3]) {
@@ -49,7 +53,9 @@ void draw_board(int grid_array[3][3]) {
 
 int turn_function(int turn_num) {
 
-	if (turn_num % 2)
+	// X = 0
+	// O = 10
+	if (turn_num % 2 == 0)
 		return 0;
 	else
 		return 10;
@@ -62,10 +68,12 @@ void choose(int grid_array[3][3], int turn) {
 
 	int choice;
 	char turn_char;
+
+	// To convert the number into a representative char
 	if (turn == 0)
-		turn_char = 'X';
+		turn_char = 'X'; // X = 0
 	else
-		turn_char = 'O';
+		turn_char = 'O'; // O = 10
 
 
 	std::cout << "\n It's " << turn_char << "'s turn, choose a spot: ";
