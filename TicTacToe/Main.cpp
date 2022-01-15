@@ -38,7 +38,8 @@ int main()
 
 		// check if any has won, return true if so
 		// check only after 5 movement, as it impossible to win before that
-		if (turn_num >= 5)
+		// we start counting from 0 so...
+		if (turn_num >= 4)
 			win = win_checker(grid_array);
 		
 
